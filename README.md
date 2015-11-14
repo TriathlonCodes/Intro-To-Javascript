@@ -23,35 +23,45 @@
 
 Declaring a Variable:
 
- > var firstName = "Jane"
- > var lastName = "Austen"
- > var name = firstName + " " + lastName
- > var names; // creates a variable to be defined. If called you get undefined
- > var names = [];
+ $ var firstName = "Jane"
+
+ $ var lastName = "Austen"
+
+ $ var name = firstName + " " + lastName
+
+ $ var names; // creates a variable to be defined. If called you get undefined
+
+ $ var names = [];
 
 #### Functions
 
 Declaring a Function:
 
- > var combineName = function(firstName, lastName){
+ $ var combineName = function(firstName, lastName){
      return(firstName.concat(" ", lastName))
    }
- > function sayHello(){
+
+ $ function sayHello(){
      return "Hello, World."
    }
- > var x = (function(){
+
+ $ var x = (function(){
     var p = "password"
     return function(password){
       return p === password
     }
+
   })()    // IIFE -- immediately invoked function
   // cannot access var p from the console. It's more protected!
 
 Calling a Function:
 
- > sayHello // function (){ return "Hello, World." }
- > sayHello() // "Hello, World."
- > x() // false
- > x("password") // true
+ $ sayHello // function (){ return "Hello, World." }
+
+ $ sayHello() // "Hello, World."
+
+ $ x() // false
+
+ $ x("password") // true
 
 #### Objects:
