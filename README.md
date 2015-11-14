@@ -52,12 +52,11 @@ Declaring a Function:
     return function(password){
       return p === password
     }
-
   })()    // IIFE -- immediately invoked function
   // cannot access var p from the console. It's more protected!
 ```
 Calling a Function:
-
+```javascript
  $ sayHello // function (){ return "Hello, World." }
 
  $ sayHello() // "Hello, World."
@@ -65,5 +64,105 @@ Calling a Function:
  $ x() // false
 
  $ x("password") // true
-
+```
 #### Objects:
+
+Declaring Objects
+```javascript
+var ironMan = {
+  firstName: "Tony",
+  lastName: "Stark",
+  company: "Stark Industries",
+  greeting: function(name){
+    return "Hello " + name
+  }
+}
+
+ironMan.car = { make: "Tesla", year: 2015}
+
+```
+
+Calling Objects:
+
+```javascript
+ironMan.firstName // "Tony"
+
+ironMan["company"] // "Stark Industries"
+
+ironMan.greeting // function (name){
+    return "Hello " + name
+  }
+
+ironMan.greeting("Stephanie") // "Hello Stephanie"
+
+ironMan.car // Object {make: "Tesla", year: 2015}
+ironMan.car.make // "Tesla"
+
+```
+
+#### Classes
+
+ - by declaring with a capital letter, JS knows it's a class
+```javascript
+
+var Person = function(firstName, lastName, gender){
+  this.firstName = firstName
+  this.lastName = lastName
+  this.gender = gender
+}
+
+Person.prototype.greeting = function(){
+  return "Hello, my name is " + this.firstName
+}
+
+var jane = new Person("Jane", "Austen", "F")
+
+jane.greeting() // "Hello, my name is Jane"
+jane.profession = "Author"
+
+var tony = new Person("Tony", "Stark", "M")
+tony.profession // undefined
+jane.profession // "Author"
+
+```
+
+#### What is this?
+
+this is the object you are acting upon.
+
+```javascript
+
+var obj = {
+  funct: function(){return this},
+  variable: "x"
+}
+
+obj.funct() // Object {variable: "x"}
+
+var Person = function(name){
+  this.name = name;
+  this.defineThis = this
+}
+
+var tony = new Person("Tony")
+tony.defineThis // Person {name: "Tony", defineThis: Person}
+
+var OtherTypeOfPerson = function(name){
+  this.name = name;
+  this.defineThis = function(){return this}
+}
+
+var jane = new OtherTypeOfPerson("Jane")
+jane.defineThis() // Person {name: "Jane"}
+
+```
+##### This Tips:
+
+use debugger in you code then console.log(this)
+
+this ~ self
+
+declare this to a variable so it cane be used later when this changes.
+
+
+
