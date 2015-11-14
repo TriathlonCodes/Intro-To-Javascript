@@ -1,7 +1,5 @@
 # Intro-To-Javascript
 
-## Why JavaScript is Weird:
-
 ### Basics:
 
 #### Data types:
@@ -111,18 +109,19 @@ var Person = function(firstName, lastName, gender){
   this.gender = gender
 }
 
-Person.prototype.greeting = function(){
-  return "Hello, my name is " + this.firstName
-}
-
 var jane = new Person("Jane", "Austen", "F")
 
-jane.greeting() // "Hello, my name is Jane"
 jane.profession = "Author"
 
 var tony = new Person("Tony", "Stark", "M")
 tony.profession // undefined
 jane.profession // "Author"
+
+Person.prototype.greeting = function(){
+  return "Hello, my name is " + this.firstName
+}
+
+jane.greeting() // "Hello, my name is Jane"
 
 ```
 
@@ -162,7 +161,27 @@ use debugger in you code then console.log(this)
 
 this ~ self
 
-declare this to a variable so it cane be used later when this changes.
+declare this to a variable so it can be used later when this changes.
+
+##### Other things:
+
+manipulating the DOM:
+
+"$" -- signifies jquery
+
+```javascript
+$('h3').append('<img src="http://www.dog-obedience-training-review.com/sites/default/files/yorkie-puppy-for-sale.jpg">')
+
+// OR
+
+h3 = getElementByTag("h3")
+for (var i = 0; i < h3.length; i++){
+  h3[i].outerHTML = '<img src="http://www.dog-obedience-training-review.com/sites/default/files/yorkie-puppy-for-sale.jpg">'
+}
+
+
+```
+
 
 
 
