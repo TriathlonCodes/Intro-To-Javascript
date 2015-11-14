@@ -22,7 +22,7 @@
 #### Variables
 
 Declaring a Variable:
-
+```javascript
  $ var firstName = "Jane"
 
  $ var lastName = "Austen"
@@ -32,11 +32,13 @@ Declaring a Variable:
  $ var names; // creates a variable to be defined. If called you get undefined
 
  $ var names = [];
+ ```
 
 #### Functions
 
 Declaring a Function:
 
+```javascript
  $ var combineName = function(firstName, lastName){
      return(firstName.concat(" ", lastName))
    }
@@ -53,7 +55,7 @@ Declaring a Function:
 
   })()    // IIFE -- immediately invoked function
   // cannot access var p from the console. It's more protected!
-
+```
 Calling a Function:
 
  $ sayHello // function (){ return "Hello, World." }
