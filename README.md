@@ -9,6 +9,7 @@
 | Ruby          | JavaScript    | Explanation |
 | ------------- |:-------------:|:------------------------------------:|
 |  "4" == 4 // false   | "4" == 4 // true | == is a type coersive, and a loose equality checker |
+| | "4" === 4 // false | 4 === 4 // true
 | falsys: nil, false    | falsys: null, undefined, 0, NaN, ""  | null == false, but undefined != false |
 | "My name is #{name}." | "My name is " + name + "." | JS does not have string interpolation |
 | p "this is ruby" | console.log("this is javascript") | |
@@ -100,7 +101,6 @@ ironMan.car.make // "Tesla"
 
 #### Classes
 
- - by declaring with a capital letter, JS knows it's a class
 ```javascript
 
 var Person = function(firstName, lastName, gender){
@@ -163,7 +163,7 @@ this ~ self
 
 declare this to a variable so it can be used later when this changes.
 
-##### Other things:
+#### Other things:
 
 manipulating the DOM:
 
@@ -181,7 +181,10 @@ for (var i = 0; i < h3.length; i++){
 
 
 ```
+#### Naming Conventions
 
-
+CamelCasing : Objects
+snakeCasing : variables and functions
+UPPERCASE : constant
 
 
