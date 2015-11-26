@@ -53,6 +53,9 @@ Declaring a Function:
     }
   })()    // IIFE -- immediately invoked function
   // cannot access var p from the console. It's more protected!
+
+ //ES6 function notation, called Arrow Functions
+ $ var x = (num) => { return num * num }
 ```
 Calling a Function:
 ```javascript
