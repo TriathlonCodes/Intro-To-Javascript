@@ -177,10 +177,63 @@ $('h3').append('<img src="http://www.dog-obedience-training-review.com/sites/def
 
 // OR
 
-h3 = getElementByTag("h3")
+var h3 = document.getElementsByTagName("h3")
 for (var i = 0; i < h3.length; i++){
   h3[i].outerHTML = '<img src="http://www.dog-obedience-training-review.com/sites/default/files/yorkie-puppy-for-sale.jpg">'
 }
+
+// jquery makes it easier.
+
+```
+
+### AJAX - your first introductions
+
+<b>Think of an ajax reqest like an amazon order. </b>
+
+If your computer receives something in a format it is not expecting, it gets mad (ex: expecting HTML and gets back JSON). What am I supposed to do with spatulas? I ordered a whisk
+
+If you send something to the database, like in a post request, and it's not in the format your backend is expecting, you'll get an error or failure. (ex: sending a single variable, but the backend expects full form of data). How am I supposed to understand this clingon character set? I speak English.
+
+#### Get Request:
+
+All you are doing is GETTING something from a site or file
+
+Things you need:
+
+ - url
+ - datatype you are expecting back (optional)
+
+ #### Post Request:
+
+You are changing things in the database.
+
+Things you need:
+
+ - url
+ - method "POST"
+ - datatype expecting back
+ - the data you are sending (often as a single variable or a json object)
+
+
+EXAMPLE:
+
+```javascript
+$.ajax({                  // Check it out! You're just sending JSON
+  url: "example.html",    // Where are you sending your request?
+  method: "POST",         // Are you posting or getting?
+  data: {name: "Marathon", color: "spotted"},     // What are you sending?
+  dataType: "JSON"        // What do you expect back
+}).done(function(response){     // what happens when it worked
+  conosle.log("Success!")
+  // do something with the response
+}).fail(function(response){     // what happens when it didn't work
+  console.log("Something didn't work.")
+  console.log(response)
+})
+
+```
+
+
 
 
 ```
