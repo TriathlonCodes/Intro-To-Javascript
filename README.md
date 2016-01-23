@@ -10,7 +10,7 @@
 | ------------- |:-------------:|:------------------------------------:|
 |  "4" == 4 // false   | "4" == 4 // true | == is a type coersive, and a loose equality checker |
 | | "4" === 4 // false | 4 === 4 // true
-| falsys: nil, false    | falsys: null, undefined, 0, NaN, ""  | null == false, but undefined != false |
+| falsys: nil, false    | falsys: null, undefined, 0, NaN, ""  | null == undefined, but undefined != false |
 | "My name is #{name}." | "My name is " + name + "." | JS does not have string interpolation |
 | p "this is ruby" | console.log("this is javascript") | |
 | [1,2].push(4) // [1,2,4] | [1,2].push(4) // 3 | returns the length of the newly created array |
@@ -173,13 +173,13 @@ manipulating the DOM:
 "$" -- signifies jquery
 
 ```javascript
-$('h3').append('<img src="http://www.dog-obedience-training-review.com/sites/default/files/yorkie-puppy-for-sale.jpg">')
+$('h3').append('<img src="http://i.imgur.com/nZlaeSH.jpg">')
 
 // OR
 
 var h3 = document.getElementsByTagName("h3")
 for (var i = 0; i < h3.length; i++){
-  h3[i].outerHTML = '<img src="http://www.dog-obedience-training-review.com/sites/default/files/yorkie-puppy-for-sale.jpg">'
+  h3[i].outerHTML = '<img src="http://i.imgur.com/nZlaeSH.jpg">'
 }
 
 // jquery makes it easier.
