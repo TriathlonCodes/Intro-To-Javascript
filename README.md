@@ -71,6 +71,7 @@ Calling a Function:
 
 Declaring Objects
 ```javascript
+// object literals
 var ironMan = {
   firstName: "Tony",
   lastName: "Stark",
@@ -102,9 +103,11 @@ ironMan.car.make // "Tesla"
 
 ```
 
-#### Classes
+#### Classes... sort of
 
 ```javascript
+
+// contrcructor functions
 
 var Person = function(firstName, lastName, gender){
   this.firstName = firstName
